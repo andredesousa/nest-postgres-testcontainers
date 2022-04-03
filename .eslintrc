@@ -1,0 +1,94 @@
+{
+  "root": true,
+  "env": {
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_+(_*?)$",
+        "varsIgnorePattern": "^_+(_*?)$",
+        "caughtErrorsIgnorePattern": "^_+(_*?)$",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": "error",
+    "@typescript-eslint/no-var-requires": "error",
+    "@typescript-eslint/member-ordering": "error",
+    "arrow-parens": ["error", "as-needed"],
+    "class-methods-use-this": "off",
+    "curly": ["error", "all"],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.spec.ts", "src/environments/*.ts", "src/test.ts"]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "jest/consistent-test-it": "error",
+    "jest/expect-expect": "error",
+    "jest/no-test-return-statement": "error",
+    "no-console": "error",
+    "no-shadow": "off",
+    "no-use-before-define": "off",
+    "no-useless-constructor": "off",
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "next": "return",
+        "prev": "*"
+      },
+      {
+        "blankLine": "always",
+        "next": "*",
+        "prev": ["const", "let", "var"]
+      },
+      {
+        "blankLine": "any",
+        "next": ["const", "let", "var"],
+        "prev": ["const", "let", "var"]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  }
+}

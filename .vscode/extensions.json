@@ -1,0 +1,10 @@
+
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "ckolkman.vscode-postgres",
+    "AbhijoyBasak.nestjs-files",
+    "Orta.vscode-jest"
+  ]
+}
