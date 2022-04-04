@@ -7,7 +7,7 @@
 module.exports = {
   rootDir: '.',
   moduleFileExtensions: ['js', 'json', 'ts'],
-  testTimeout: 15000,
+  testTimeout: 30000,
   testEnvironment: 'node',
   testMatch: ['<rootDir>/specs/**/*.spec.ts'],
   transform: {

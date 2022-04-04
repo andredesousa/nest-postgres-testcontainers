@@ -27,5 +27,6 @@ export const environment: IEnvironment = {
   dbPassword: 'secret',
   dbPort: 5432,
   dbUsername: 'root',
+  logging: true,
   swaggerInitializer,
 };

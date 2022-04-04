@@ -8,5 +8,6 @@ export interface IEnvironment {
   dbPassword: string;
   dbPort: number;
   dbUsername: string;
+  logging: boolean;
   swaggerInitializer: (app: INestApplication) => OpenAPIObject;
 }

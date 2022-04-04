@@ -8,5 +8,6 @@ export const environment: IEnvironment = {
   dbPassword: process.env.DB_PASSWORD,
   dbPort: +process.env.DB_PORT,
   dbUsername: process.env.DB_USER,
+  logging: true,
   swaggerInitializer: () => ({} as OpenAPIObject),
 };

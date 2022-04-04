@@ -7,15 +7,18 @@ import { ProductService } from './services/product.service';
 
 @Module({
   imports: [
-    SequelizeModule.forRoot({
-      dialect: 'postgres',
-      host: environment.dbHost,
-      port: environment.dbPort,
-      username: environment.dbUsername,
-      password: environment.dbPassword,
-      database: environment.dbName,
-      autoLoadModels: true,
-      synchronize: true,
+    SequelizeModule.forRootAsync({
+      useFactory: () => ({
+        dialect: 'postgres',
+        host: environment.dbHost,
+        port: environment.dbPort,
+        username: environment.dbUsername,
+        password: environment.dbPassword,
+        database: environment.dbName,
+        logging: environment.logging,
+        autoLoadModels: true,
+        synchronize: true,
+      }),
     }),
     SequelizeModule.forFeature([Product]),
   ],
