@@ -44,11 +44,12 @@ export class ProductService {
 
   /**
    * Updates a product.
+   * @param id The id of the product.
    * @param productDto The product to update.
    * @returns The updated product.
    */
-  async update(productDto: ProductDto): Promise<Product> {
-    const product = await this.findOne(productDto.id || -1);
+  async update(id: number, productDto: ProductDto): Promise<Product> {
+    const product = await this.findOne(id);
 
     return product.setAttributes(productDto).save();
   }

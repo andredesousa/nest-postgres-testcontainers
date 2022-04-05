@@ -17,13 +17,13 @@ export class ProductController {
   }
 
   @Post()
-  create(@Body() createUserDto: ProductDto): Promise<ProductDto> {
-    return this.productService.create(createUserDto);
+  create(@Body() product: ProductDto): Promise<ProductDto> {
+    return this.productService.create(product);
   }
 
   @Put(':id')
-  update(@Body() updateUserDto: ProductDto): Promise<ProductDto> {
-    return this.productService.update(updateUserDto);
+  update(@Param('id') id: number, @Body() product: ProductDto): Promise<ProductDto> {
+    return this.productService.update(id, product);
   }
 
   @Delete(':id')

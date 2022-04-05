@@ -4,10 +4,10 @@ import { OpenAPIObject } from '@nestjs/swagger';
 export interface IEnvironment {
   production: boolean;
   dbHost: string;
-  dbName: string;
-  dbPassword: string;
   dbPort: number;
+  dbName: string;
   dbUsername: string;
+  dbPassword: string;
   logging: boolean;
   swaggerInitializer: (app: INestApplication) => OpenAPIObject;
 }

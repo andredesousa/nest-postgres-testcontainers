@@ -61,7 +61,7 @@ describe('ProductService', () => {
     it('returns the updated product', async () => {
       jest.spyOn(service, 'findOne').mockReturnValue(Promise.resolve(product));
 
-      expect(await service.update(product)).toEqual(product);
+      expect(await service.update(1, product)).toEqual(product);
     });
   });
 

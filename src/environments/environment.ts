@@ -23,10 +23,10 @@ function swaggerInitializer(app: INestApplication): OpenAPIObject {
 export const environment: IEnvironment = {
   production: false,
   dbHost: 'localhost',
-  dbName: 'nest',
-  dbPassword: 'secret',
   dbPort: 5432,
+  dbName: 'nest',
   dbUsername: 'root',
+  dbPassword: 'secret',
   logging: true,
   swaggerInitializer,
 };

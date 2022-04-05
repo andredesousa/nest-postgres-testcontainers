@@ -1,4 +1,4 @@
-import { Test, TestingModule } from '@nestjs/testing';
+import { Test } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import { PostgreSqlContainer } from 'testcontainers';
 import * as request from 'supertest';
@@ -20,9 +20,7 @@ describe('App (e2e)', () => {
     environment.dbPort = pg.getMappedPort(5432);
     environment.logging = false;
 
-    const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [AppModule],
-    }).compile();
+    const moduleFixture = await Test.createTestingModule({ imports: [AppModule] }).compile();
 
     app = moduleFixture.createNestApplication();
 

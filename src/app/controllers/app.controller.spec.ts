@@ -50,10 +50,10 @@ describe('ProductController', () => {
 
   describe('#update', () => {
     it('returns the updated product', async () => {
-      const result: ProductDto = await controller.update(product);
+      const result: ProductDto = await controller.update(1, product);
 
       expect(result).toEqual(product);
-      expect(service.update).toHaveBeenCalledWith(product);
+      expect(service.update).toHaveBeenCalledWith(1, product);
     });
   });
 
